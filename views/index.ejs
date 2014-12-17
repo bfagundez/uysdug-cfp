@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>UYSDUG - Call for Papers</title>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css"/>
+</head>
+<body>
+  <div class="container">
+    <div class="row">
+    <div class="col-xs-12">
+      <h1>UYSDUG</h1>
+      <h2>Call for Papers</h2>
+        <% if (completed) {%>
+        <div class="alert alert-success" role="alert"> Thanks! we've received your paper details!</div>
+        <% } else { %>
+        <form action="save_cfp" method="POST" role="form">
+          <div class="form-group">
+            <label for="name">Nombre</label>
+            <input type="text" class="form-control" name="name" placeholder="Nombre">
+          </div>
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" class="form-control" name="email" placeholder="Email">
+          </div>
+          <div class="form-group">
+            <label for="title">Titulo</label>
+            <input type="text" class="form-control" name="title" placeholder="Titulo">
+          </div>
+          <div class="form-group">
+            <label for="abstract">Abstract</label>
+            <textarea class="form-control" rows="8" name="abstract" placeholder="Paper Abstract"></textarea>
+          </div>
+          <input type="submit" class="btn btn-success btn-block" value="Enviar"/>
+        </form>
+        <% } %>
+    </div>
+  </div>
+  </div>
+  <script src="//code.jquery.com/jquery-2.1.1.min.js"></script>
+  <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
+
+</body>
+</html>
